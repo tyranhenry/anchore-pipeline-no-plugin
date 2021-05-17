@@ -24,7 +24,7 @@ pipeline {
     DOCKER_HUB = credentials("${HUB_CREDENTIAL}")
     // we'll need the anchore credential to pass the user
     // and password to syft so it can upload the results
-    ANCHORE_CREDENTIAL = "AnchoreJenkinsUser"
+    ANCHORE_CREDENTIAL = "anchore-jenkins"
     // use credentials to set ANCHORE_USR and ANCHORE_PSW
     ANCHORE = credentials("${ANCHORE_CREDENTIAL}")
     //
