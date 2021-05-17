@@ -24,12 +24,12 @@ pipeline {
     DOCKER_HUB = credentials("${HUB_CREDENTIAL}")
     // we'll need the anchore credential to pass the user
     // and password to syft so it can upload the results
-    ANCHORE_CREDENTIAL = "AnchoreJenkinsUser"
+    ANCHORE_CREDENTIAL = "anchore-jenkins"
     // use credentials to set ANCHORE_USR and ANCHORE_PSW
     ANCHORE = credentials("${ANCHORE_CREDENTIAL}")
     //
     // api endpoint of your anchore instance
-    ANCHORE_URL = "http://anchore3-priv.novarese.net:8228/v1"
+    ANCHORE_URL = "http://localhost:8228/v1"
     //
     // assuming you want to use docker hub, this shouldn't need
     // any changes, but if you're using another registry, you
